@@ -65,17 +65,18 @@ let setBox = [box1,box2,box3,box4,box5,box6,box7,box8,box9];
      else if(Data[2]===Data[4] && Data[4]===Data[6] && Data[6]!==""){
         Won(Data[6])
      }
+
 }
 
 const Won = (winner)=>{
     setCheak(true);
     if(winner ==="x"){
        titleRef.current.innerHTML = `Congrtulatins: <img src='${Cross_img}'>  Wins`;
-      
+     
     }
     else{
         titleRef.current.innerHTML = `Congrtulatins: <img src='${Circle_img}'> Wins `;
-        
+       
     }
 }
 
@@ -86,6 +87,7 @@ const Resat = ()=>{
     setBox.map((e)=>{
       e.current.innerHTML = "";
     })
+    setCount(0);
 
 }
   return (
